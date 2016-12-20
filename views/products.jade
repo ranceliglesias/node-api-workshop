@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .container
+    h1 Create Records
+    p.lead Your products.
+    br
+    form(role='form', action="/product",method="post", style='max-width: 300px;')
+      .form-group
+          input.form-control(type='text', name="model", placeholder='Model')
+      .form-group
+        input.form-control(type='text', name="os", placeholder='Os')
+      .form-group
+        input.form-control(type='text', name="storage", placeholder='Storage')
+      .form-group
+        input.form-control(type='text', name="camera", placeholder='Camera')
+      button.btn.btn-default(type='submit') Submit
+      &nbsp
+      a(href='/')
+        button.btn.btn-primary(type="button") Cancel
